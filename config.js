@@ -24,11 +24,11 @@ module.exports = {
 		Both cases require you to type the domain where the files will be served on the `domain` key below.
 		Which one you use is ultimately up to you.
 	*/
-	serveFilesWithNode: false,
-	domain: 'https://lolisafe.moe',
+	serveFilesWithNode: true,
+	domain: 'https://funky-furniture.glitch.me',
 
 	// Port on which to run the server
-	port: 9999,
+	port: process.env.PORT,
 
 	// Pages to process for the frontend
 	pages: ['home', 'auth', 'dashboard', 'faq'],
@@ -65,7 +65,7 @@ module.exports = {
 			Max file size allowed. Needs to be in MB
 			Note: When maxSize is greater than 1 MiB, you must set the client_max_body_size to the same as maxSize.
 		*/
-		maxSize: '512MB',
+		maxSize: '5MB',
 
 		// The length of the random generated name for the uploaded files
 		fileLength: 32,
